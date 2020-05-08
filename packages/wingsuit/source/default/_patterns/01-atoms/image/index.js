@@ -10,6 +10,8 @@ import './_image--primary.twig';
 
 const patternDefinition = require('./image.wingsuit.yml');
 
+export const name = 'image';
+
 export const defaults = {
-  patternDefinition: patternDefinition
+  patternDefinition,
 };

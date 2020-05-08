@@ -5,6 +5,11 @@
  * Individual rule reference: http://eslint.org/docs/rules/NAME-OF-RULE
  */
 const path = require('path');
+const namespaces = require('./source/default/namespaces');
+const aliasMap = [];
+Object.keys(namespaces).forEach((key)=>{
+  aliasMap.push([key, namespaces[key]]);
+});
 
 module.exports = {
   extends: [
@@ -29,11 +34,13 @@ module.exports = {
   rules: {
     'no-console': [0], // turned off for now while we are console.logging everywhere.
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/prefer-default-export': [0]
   },
-  settings: {
-    'import/resolver': {
-      node: {}
-
-    },
-  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        map: aliasMap
+      }
+    }
+  }
 };
