@@ -19,6 +19,7 @@
   "scripts": {
     "dev:storybook": "npm run build:assets; start-storybook --config-dir apps/storybook -s ./dist/app-assets",
     "dev:drupal": "cross-env-shell NODE_ENV=development \"webpack --watch --config ./apps/drupal/webpack.config.js\"",
+    "dev:gatsby": "cd apps/gatsby; gatsby develop",
     "build:drupal": "cross-env-shell NODE_ENV=production \"webpack --config ./apps/drupal/webpack.config.js\"",
     "build:assets": "cross-env-shell NODE_ENV=production \"webpack --config ./apps/assets/webpack.config.js\"",
     "lint:js": "eslint --ext .js,.vue ./",

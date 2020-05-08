@@ -6,7 +6,10 @@ button:
     button_content:
       type: text
       label: Content
-      preview: More
+      preview:
+        faker:
+          property: hacker.verb
+
   variants:
     default:
       label: Default
@@ -14,21 +17,11 @@ button:
       label: Outline
       description: Inverts colors
   settings:
-    url:
-      type: token
-      label: Url
-      preview: 'http://www.nim.org'
-    button_svg_size:
+    color:
       type: select
-      label: Icon Size
-      default_value: default
+      label: Color
+      default_value: red-500
       options:
-        default: Default
-        large: Large
-    button_svg:
-      type: select
-      label: SVG
-      options:
-        chevron-up: Chevron Up
-        chevron-right: Chevron Right
-        arrow-right: Arrow Right
+        red-500: Red
+        blue-500: Blue
+        yellow-500: Yellow
