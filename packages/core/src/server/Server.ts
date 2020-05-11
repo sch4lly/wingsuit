@@ -66,11 +66,7 @@ export default class Server {
       ...[
         {
           mode: this.environment,
-          output: {
-            filename: '[name].js',
-          },
           node: {},
-          devtool: this.environment === 'development' ? 'eval' : 'source-map',
           optimization: {
             minimizer: [
               new TerserPlugin({

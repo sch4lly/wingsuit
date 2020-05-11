@@ -14,12 +14,13 @@
   },
   "keywords": [
     "storybook",
-    "prototyping"
+    "prototyping",
+    "gatsby"
   ],
   "scripts": {
     "dev:storybook": "start-storybook --config-dir apps/storybook -s ./dist/storybook-assets",
     "dev:drupal": "cross-env-shell NODE_ENV=development \"webpack --watch --config ./apps/drupal/webpack.config.js\"",
-    "dev:gatsby": "cd apps/gatsby; gatsby develop",
+    "dev:gatsby": "gatsby develop",
     "build:drupal": "cross-env-shell NODE_ENV=production \"webpack --config ./apps/drupal/webpack.config.js\"",
     "lint:js": "eslint --ext .js,.vue ./",
     "lint:css": "stylelint '**/*.css'",
@@ -65,10 +66,23 @@
     "require-context": "^1.1.0",
     "stylelint-scss": "^3.17.2",
     "webpack": "^4.41.3",
-    "yo": "^3.1.1"
+    "yo": "^3.1.1",
+    "gatsby": "^2.21.13",
+    "gatsby-image": "^2.4.1",
+    "gatsby-plugin-manifest": "^2.4.2",
+    "gatsby-plugin-offline": "^3.2.1",
+    "gatsby-plugin-react-helmet": "^3.3.1",
+    "gatsby-plugin-sharp": "^2.6.1",
+    "gatsby-source-filesystem": "^2.3.1",
+    "gatsby-transformer-sharp": "^2.5.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.0.0"
   },
   "dependencies": {
     "alpinejs": "^1.10.1",
+    "gatsby-plugin-page-creator": "^2.3.1",
     "svg4everybody": "^2.1.9",
     "tailwindcss": "^1.2.0"
   },
